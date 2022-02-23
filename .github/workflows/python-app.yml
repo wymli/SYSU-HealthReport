@@ -12,9 +12,9 @@ jobs:
     steps:
     - name: Health Report
       run: |
-        pip install -r ${{ github.action_path }}\requirements.txt
+        pip install -r ./requirements.txt
         Set-TimeZone -Name "China Standard Time"
-        python ${{ github.action_path }}\jksb_sysu.py
+        python ./jksb_sysu.py
       env:
         netid: ${{secrets.NETID}}
         password: ${{secrets.PASSWORD}}
