@@ -27,3 +27,5 @@ jobs:
         tg_bot_token: ${{secrets.TG_BOT_TOKEN}}
         tg_chatid: ${{secrets.TG_CHATID}}
         GITHUB_ACTION_PATH: .
+        PYTHONIOENCODING: utf-8
+        PYTHONLEGACYWINDOWSSTDIO: utf-8
