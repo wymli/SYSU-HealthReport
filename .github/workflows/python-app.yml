@@ -11,8 +11,11 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: Health Report
-      uses: Editst/SYSU-HealthReport@master
-      with:
+      run: |
+        pip install -r ${{ github.action_path }}\requirements.txt
+        Set-TimeZone -Name "China Standard Time"
+        python ${{ github.action_path }}\jksb_sysu.py
+      env:
         netid: ${{secrets.NETID}}
         password: ${{secrets.PASSWORD}}
         ocr_token: ${{secrets.OCR_TOKEN}}
