@@ -59,7 +59,7 @@ def jksb():
     time.sleep(20)
     
     print("选择港澳台")
-    driver.find_element(By.XPATH), '//*[@id="V1_CTRL118"]').click()
+    driver.find_element(By.XPATH, '//*[@id="V1_CTRL118"]').click()
     time.sleep(1)
 
     print("提交健康申报")
